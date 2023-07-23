@@ -29,7 +29,7 @@ const Circle: React.FC<{ data: ISvgImage }> = ({ data: c }) => {
 
   const onClick = () => {
     if (c.link) window.open(c.link, '_blank', 'noreferrer');
-    // if (c.path) navigate(c.path);
+    if (c.path) window.open(c.path, '_self');
   };
 
   return (
