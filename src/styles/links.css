@@ -1,0 +1,15 @@
+#container-weave .nav-wrapper {
+  position: absolute;
+  top: 50%;
+}
+
+#container-weave .left {
+  left: 0px;
+}
+
+#container-weave .right {
+  right: 0;
+}
+
+#container-weave .nav-link {
+}
