@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { IMAGES, ISvgImage } from './images';
 import { Floating } from './Floating';
@@ -28,7 +28,7 @@ const Position = styled.div<{ left: number; top: number; size: number }>`
   left: ${({ left }) => left}px;
   top: ${({ top }) => top}px;
 
-  transform: translate(-70%, -50%);
+  transform: translate(-70%, -70%);
 `;
 
 const Svg = styled.svg`
@@ -59,13 +59,24 @@ const getPosition = (radius: number, numNodes: number, index: number) => {
   return { left, top };
 };
 
-const Island: React.FC<{ data: ISvgImage; left: number; top: number; size: number }> = ({
-  data: c,
-  left,
-  top,
-  size,
-}) => {
+const Island: React.FC<{ data: ISvgImage; i: number }> = ({ data: c, i }) => {
   const [hover, setHover] = useState<0 | 1>(0);
+  const [pos, setPos] = useState<{ left: number; top: number; size: number }>();
+
+  const setStyles = () => {
+    const radius = getRadius();
+    const size = radius * 0.4;
+
+    const { left, top } = getPosition(radius, 5, i);
+    setPos({ left, top, size });
+  };
+
+  useEffect(() => {
+    setStyles();
+    window.addEventListener('resize', setStyles);
+    return () => window.removeEventListener('resize', setStyles);
+  }, []);
+
   const onMouseEnter = () => {
     setHover(1);
   };
@@ -75,8 +86,8 @@ const Island: React.FC<{ data: ISvgImage; left: number; top: number; size: numbe
 
   const onClick = () => {};
 
-  return (
-    <Position key={c.id} left={left} top={top} size={size}>
+  return pos ? (
+    <Position key={c.id} left={pos.left} top={pos.top} size={pos.size}>
       <Svg
         id={c.id}
         data-name={c.name}
@@ -95,7 +106,7 @@ const Island: React.FC<{ data: ISvgImage; left: number; top: number; size: numbe
         />
       </Svg>
     </Position>
-  );
+  ) : null;
 };
 
 export const Islands: React.FC = () => {
@@ -104,14 +115,10 @@ export const Islands: React.FC = () => {
       <Border>
         {Object.keys(IMAGES.islands).map((id, i) => {
           const c = IMAGES.islands[id];
-          const radius = getRadius();
-          console.log(getRadius());
-          const size = radius * 0.4;
 
-          const { left, top } = getPosition(radius, 5, i);
           return (
             <Floating key={id} min={-2} max={2}>
-              <Island data={c} left={left} top={top} size={size} />
+              <Island data={c} i={i} />
             </Floating>
           );
         })}
