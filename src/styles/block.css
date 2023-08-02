@@ -1,5 +1,9 @@
 #container-weave {
   padding: 40px 30px;
+}
+
+#container-weave {
+  padding: 40px 30px;
   display: flex;
   flex-direction: column;
 
@@ -50,7 +54,20 @@
 #container-weave .img-caption {
 }
 
+#container-weave {
+  padding: 40px 30px;
+}
+
 #container-weave .t-quote {
+  font-size: 14pt;
+  font-family: 'libre baskerville', serif;
+}
+
+#container-weave .t-qorigin {
+  font-family: 'nimbus sans l', sans-serif;
+  font-size: 12pt;
+  padding-top: 15px;
+  text-align: right;
 }
 
 #container-weave .t-notes-wrapper {

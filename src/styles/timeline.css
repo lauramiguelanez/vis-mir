@@ -39,6 +39,7 @@
   width: 50%;
   padding-right: 20px;
 }
+
 #container-weave .t-wrapper {
   width: 50%;
   display: flex;
@@ -49,15 +50,21 @@
   display: flex;
   flex-direction: column;
 }
+
 #container-weave .t-element {
   display: flex;
   flex-direction: row;
-  width: 50%;
+
+  border-top: 2px solid black;
+  padding-top: 6px;
+
+  font-family: 'nimbus sans l', sans-serif;
+  font-size: 12pt;
 }
 #container-weave .t-text {
 }
 #container-weave .t-number {
-  padding-right: 1s0px;
+  padding-right: 10px;
 }
 #container-weave .t-strong {
   font-weight: bold;
