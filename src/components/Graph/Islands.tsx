@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { IMAGES, ISvgImage } from './images';
 import { Floating } from './Floating';
+import { Tooltip } from '../Tooltip';
+
+const Paragraph = styled.p`
+  font-family: ${(props) => props.theme.font.family.mulish};
+  font-size: 14px;
+  width: 300px;
+`;
 
 const Wrapper = styled.div`
   height: 100%;
@@ -16,8 +23,8 @@ const Wrapper = styled.div`
 `;
 
 const Border = styled.div`
-  height: 95vmin;
-  width: 95vmin;
+  height: 85vmin;
+  width: 85vmin;
   position: relative;
 `;
 
@@ -28,7 +35,7 @@ const Position = styled.div<{ left: number; top: number; size: number }>`
   left: ${({ left }) => left}px;
   top: ${({ top }) => top}px;
 
-  transform: translate(-70%, -70%);
+  transform: translate(-60%, -50%);
 `;
 
 const Svg = styled.svg`
@@ -39,7 +46,7 @@ const Svg = styled.svg`
 
 const getRadius = () => {
   const { innerHeight, innerWidth } = window;
-  const d = Math.min(...[innerHeight, innerWidth]);
+  const d = Math.min(...[innerHeight, innerWidth]) * 0.8;
   const r = d / 2;
 
   return r;
@@ -112,17 +119,29 @@ const Island: React.FC<{ data: ISvgImage; i: number }> = ({ data: c, i }) => {
 export const Islands: React.FC = () => {
   return (
     <Wrapper>
-      <Border>
-        {Object.keys(IMAGES.islands).map((id, i) => {
-          const c = IMAGES.islands[id];
+      <Tooltip
+        transform="translate(5vmin, 30vmin)"
+        position="auto"
+        content={
+          <Paragraph>
+            The smaller islands are organised around antonym word pairings that point at key themes
+            of the work: care/control, health/illness, solidarity/hostility, access/invisibility,
+            alliance/division.
+          </Paragraph>
+        }
+      >
+        <Border>
+          {Object.keys(IMAGES.islands).map((id, i) => {
+            const c = IMAGES.islands[id];
 
-          return (
-            <Floating key={id} min={-2} max={2}>
-              <Island data={c} i={i} />
-            </Floating>
-          );
-        })}
-      </Border>
+            return (
+              <Floating key={id} min={-3} max={3}>
+                <Island data={c} i={i} />
+              </Floating>
+            );
+          })}
+        </Border>
+      </Tooltip>
     </Wrapper>
   );
 };

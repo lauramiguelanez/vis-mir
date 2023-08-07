@@ -26,7 +26,7 @@ const Position = styled.div`
   position: absolute;
   height: auto;
   width: 25vmin;
-  left: 20px;
+  right: 20px;
   bottom: 20px;
 `;
 

@@ -13,7 +13,7 @@ function App() {
   return (
     <AppStyled>
       <Graph />
-      <header className="App-header">VIS-MIR</header>
+      <div id="tooltip-root" />
     </AppStyled>
   );
 }

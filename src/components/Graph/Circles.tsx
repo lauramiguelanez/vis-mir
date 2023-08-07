@@ -43,6 +43,7 @@ const Circle: React.FC<{ data: ISvgImage }> = ({ data: c }) => {
       xlinkHref={c[hover]?.image}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      onBlur={onMouseLeave}
       onClick={onClick}
     />
   );
@@ -50,7 +51,7 @@ const Circle: React.FC<{ data: ISvgImage }> = ({ data: c }) => {
 
 export const Circles: React.FC = () => {
   return (
-    <Floating min={-4} max={4}>
+    <Floating min={-6} max={6}>
       <Wrapper>
         <Svg
           id="rings"

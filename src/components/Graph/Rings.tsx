@@ -14,17 +14,17 @@ const Wrapper = styled.div`
 `;
 const RingWrapper = styled.div`
   position: relative;
-  width: 100vmin;
-  height: 100vmin;
+  width: 80vmin;
+  height: 80vmin;
 `;
 
 const AbsoluteSquare = styled.div`
   position: absolute;
-  top: 0;
-  width: 100vmin;
-  height: 100vmin;
+  width: 80vmin;
+  height: 80vmin;
   pointer-events: none;
 `;
+
 const Absolute = styled.div`
   position: absolute;
   top: 0;
