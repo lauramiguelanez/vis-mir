@@ -91,7 +91,9 @@ const Island: React.FC<{ data: ISvgImage; i: number }> = ({ data: c, i }) => {
     setHover(0);
   };
 
-  const onClick = () => {};
+  const onClick = () => {
+    if (c.path) window.location.href = c.path;
+  };
 
   return pos ? (
     <Position key={c.id} left={pos.left} top={pos.top} size={pos.size}>
