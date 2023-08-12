@@ -146,7 +146,7 @@ const NavElement: React.FC<{
   return (
     <NavEl
       onClick={() => {
-        if (path) window.location.href = path;
+        if (path) window.open(path, '_self'); //window.location.href = path;
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
