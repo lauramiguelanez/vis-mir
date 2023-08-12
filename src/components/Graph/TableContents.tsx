@@ -71,6 +71,11 @@ const NavEl = styled.div`
   overflow: hidden;
 `;
 
+const NavA = styled.a`
+  text-decoration: none;
+  color: inherit;
+`;
+
 const NavText = styled.h3<{ hover: boolean }>`
   font-family: ${(props) => props.theme.font.family.mulish};
   font-size: 20px;
@@ -144,18 +149,20 @@ const NavElement: React.FC<{
     setHover(false);
   };
   return (
-    <NavEl
-      onClick={() => {
-        if (path) window.location.href = path;
-      }}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-    >
-      <NavText hover={hover}>
-        <strong>{text.level}</strong>
-        {text.title} <NavDescription hover={hover}>{text.description}</NavDescription>
-      </NavText>
-    </NavEl>
+    <NavA href={path}>
+      <NavEl
+        /* onClick={() => {
+          if (path) window.location.href = path;
+        }} */
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+      >
+        <NavText hover={hover}>
+          <strong>{text.level}</strong>
+          {text.title} <NavDescription hover={hover}>{text.description}</NavDescription>
+        </NavText>
+      </NavEl>
+    </NavA>
   );
 };
 
