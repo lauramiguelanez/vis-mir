@@ -1,0 +1,134 @@
+#container-weave {
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .tool .tool-picture {
+    width: calc(50vw - 120px) !important;
+    max-width: calc(100vw - 120px);
+    height: 100% !important;
+    max-height: calc(100vh - 60px);
+
+    > .tool-content {
+      left: unset !important;
+      top: unset !important;
+      bottom: unset !important;
+      right: unset !important;
+    }
+  }
+
+  .tool .tool-text {
+    width: calc(100vw - 120px) !important;
+  }
+
+  .tool tool-embed {
+    width: 50% !important;
+    max-width: calc(50vw - 120px);
+    height: 100% !important;
+    max-height: calc(100vh - 60px);
+
+    > .tool-content {
+      left: unset !important;
+      top: unset !important;
+      bottom: unset !important;
+      right: unset !important;
+    }
+  }
+
+  .tool-content {
+    position: relative !important;
+  }
+}
+
+#container-weave img {
+  width: 100% !important;
+  height: auto !important;
+  position: relative;
+  top: 0px !important;
+  left: 0px !important;
+}
+
+#container-weave {
+  #weave {
+    position: relative;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*  > .tool {
+      position: relative !important;
+      width: 100% !important;
+      height: auto !important;
+      left: unset !important;
+      top: unset !important;
+    } */
+  }
+}
+
+#container-weave h1 {
+  font-family: 'nimbus sans l', sans-serif;
+  font-size: 36pt;
+  margin-bottom: 70px;
+  width: calc(100vw - 120px);
+}
+
+#container-weave .excerpts {
+  border-left: 2px solid black;
+  padding-left: 30px;
+  width: calc(100vw - 780px);
+  max-height: 400px;
+  overflow-y: scroll;
+
+  .ext-txt {
+    font-family: 'nimbus sans l', sans-serif;
+    font-size: 12pt;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .mark {
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    transform: translate(-30px, 12px);
+  }
+}
+
+#container-weave .image-caption {
+  font-family: 'nimbus sans l', sans-serif;
+  font-size: 12pt;
+  color: grey;
+  margin-top: 10px;
+  text-align: right;
+}
+
+#container-weave .t-notes-wrapper {
+  background-color: #fff6d7;
+  text-decoration: none;
+  font-family: 'ibm plex mono', monospace;
+  font-size: 14pt;
+
+  padding: 60px 50px;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#container-weave .t-notes-intro {
+  text-decoration: underline;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#container-weave .t-notes-el {
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+#container-weave .t-script {
+}

@@ -224,7 +224,7 @@ export const IMAGES: IImages = {
       width: 820,
       height: 837,
       transform: 'translate(125.6 139.41) scale(0.24)',
-      path: 'https://www.researchcatalogue.net/view/2236277/2236310',
+      path: 'https://www.researchcatalogue.net/view/2236277/2236310#tool-2237301',
       text: {
         level: 'Circle I. ',
         title: 'Cosmology as Method',

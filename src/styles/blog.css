@@ -1,0 +1,90 @@
+#container-weave #content {
+  margin-top: 40px;
+
+  .row {
+    margin-bottom: 40px;
+  }
+}
+
+#container-weave .img-caption {
+  font-family: 'nimbus sans l', sans-serif;
+  font-size: 12pt;
+  color: grey;
+  margin-top: 10px;
+  text-align: right;
+}
+
+#container-weave .tool-content > img {
+  margin-top: 25px;
+}
+
+#container-weave .tool .tool-text {
+  /* margin-top: 25px;
+  margin-bottom: 25px; */
+}
+
+#container-weave .image-caption {
+  font-family: 'nimbus sans l', sans-serif;
+  font-size: 12pt;
+  color: grey;
+  margin-top: 10px;
+  text-align: right;
+}
+
+#container-weave .h1 {
+}
+
+#container-weave h1 {
+  font-family: 'nimbus sans l', sans-serif;
+  font-size: 36pt;
+}
+
+#container-weave h1 .h1-author {
+  font-family: 'nimbus sans l', sans-serif;
+  font-size: 16pt;
+}
+
+#container-weave h2 {
+  font-family: 'nimbus sans l', sans-serif;
+  font-size: 24pt;
+}
+
+#container-weave .h2-comment {
+  margin-top: 12px;
+  font-size: 18px;
+  font-style: italic;
+  text-align: right;
+}
+
+#container-weave h3 {
+  font-family: 'nimbus sans l', sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#container-weave p {
+  font-family: 'nimbus sans l', sans-serif;
+  font-size: 14pt;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+#container-weave .t-script {
+  text-decoration: none;
+  font-family: 'ibm plex mono', monospace;
+  font-size: 14pt;
+}
+
+#container-weave .t-body {
+  font-family: 'nimbus sans l', sans-serif;
+  font-size: 14pt;
+}
+
+#container-weave .foot-note {
+  font-size: 12pt;
+  > a {
+    font-size: 12pt;
+  }
+}
