@@ -69,7 +69,6 @@ const NavWrapper = styled.div<{ height: number }>`
 const NavEl = styled.div`
   margin-bottom: 20px;
   overflow: hidden;
-  color: blue;
 `;
 
 const NavText = styled.h3<{ hover: boolean }>`
@@ -147,7 +146,7 @@ const NavElement: React.FC<{
   return (
     <NavEl
       onClick={() => {
-        if (path) window.open(path, '_self', 'noreferrer'); //window.location.href = path;
+        if (path) window.open(path, '_blank', 'noreferrer'); //window.location.href = path;
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
