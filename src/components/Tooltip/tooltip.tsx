@@ -99,7 +99,6 @@ export const Tooltip: React.FC<TooltipProps> = ({
           active={showTooltip}
           transform={transform}
         >
-          np
           {content}
         </S.Tooltip>,
       )}
