@@ -137,3 +137,28 @@ a:visited {
   padding-top: 15px;
   text-align: right;
 }
+
+#container-weave .t-notes-wrapper {
+  background-color: #fff6d7;
+  text-decoration: none;
+  font-family: 'ibm plex mono', monospace;
+  font-size: 14pt;
+
+  padding: 60px 50px;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#container-weave .t-notes-intro {
+  text-decoration: underline;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#container-weave .t-notes-el {
+  text-decoration: none;
+  margin-bottom: 20px;
+}

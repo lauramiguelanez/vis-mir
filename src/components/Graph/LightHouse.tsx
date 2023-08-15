@@ -50,7 +50,7 @@ export const LightHouse: React.FC = () => {
   };
 
   const onClick = () => {
-    if (c.path) window.location.href = c.path;
+    if (c.path) window.open(c.path, '_blank', 'noreferrer'); //window.location.href = c.path;
   };
 
   return (
