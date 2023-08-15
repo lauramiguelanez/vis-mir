@@ -3,13 +3,18 @@
   top: 50%;
 }
 
+#container-weave .nav-link .left {
+  text-align: left;
+}
+
+#container-weave .nav-link .right {
+  text-align: right;
+}
+
 #container-weave .left {
   left: 0px;
 }
 
 #container-weave .right {
   right: 0;
-}
-
-#container-weave .nav-link {
 }

@@ -88,3 +88,52 @@
     font-size: 12pt;
   }
 }
+
+#container-weave .nav-wrapper {
+  position: absolute;
+  top: 50%;
+  font-size: 36pt;
+  font-family: 'nimbus sans l', sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+#container-weave .nav-link {
+  color: black;
+  width: 100%;
+  text-decoration: none;
+  :hover {
+    text-decoration: underline;
+  }
+}
+
+#container-weave .left {
+  text-align: left;
+  left: 0;
+}
+
+#container-weave .right {
+  text-align: right;
+  right: 0;
+}
+
+#container-weave a,
+a:visited {
+  text-decoration: none;
+}
+
+#container-weave a {
+  color: black;
+}
+
+#container-weave .t-quote {
+  font-size: 14pt;
+  font-family: 'libre baskerville', serif;
+}
+
+#container-weave .t-qorigin {
+  font-family: 'nimbus sans l', sans-serif;
+  font-size: 12pt;
+  padding-top: 15px;
+  text-align: right;
+}
