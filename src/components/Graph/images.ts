@@ -206,7 +206,7 @@ export const IMAGES: IImages = {
       width: 668,
       height: 656,
       transform: 'translate(141.62 164.84) scale(0.24)',
-      path: 'https://www.researchcatalogue.net/view/2236277/2236278',
+      path: 'https://www.researchcatalogue.net/view/2236277/2237350',
       text: {
         level: 'Core Circle. ',
         title: 'Vestibule. An Introductory Essay',
