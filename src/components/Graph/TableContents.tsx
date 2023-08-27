@@ -71,6 +71,11 @@ const NavEl = styled.div`
   overflow: hidden;
 `;
 
+const NavElI = styled.div`
+  margin-bottom: 12px;
+  overflow: hidden;
+`;
+
 const NavText = styled.h3<{ hover: boolean }>`
   font-family: ${(props) => props.theme.font.family.mulish};
   font-size: 20px;
@@ -159,6 +164,30 @@ const NavElement: React.FC<{
   );
 };
 
+const NavElIsland: React.FC<{
+  text: { title: string; description: string; level: string };
+  path: string;
+}> = ({ text, path }) => {
+  const [hover, setHover] = useState(false);
+  const onMouseEnter = () => {
+    setHover(true);
+  };
+  const onMouseLeave = () => {
+    setHover(false);
+  };
+  return (
+    <NavElI
+      onClick={() => {
+        if (path) window.open(path, '_blank', 'noreferrer'); //window.location.href = path;
+      }}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      <NavText hover={hover}> {text.title}</NavText>
+    </NavElI>
+  );
+};
+
 const Navigation: React.FC = () => {
   const [height, setHeight] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
@@ -169,14 +198,26 @@ const Navigation: React.FC = () => {
     }
   }, [ref?.current]);
 
+  const { path: lPath, text: lText } = IMAGES.other.lightHouse;
   return (
     <NavWrapper height={height}>
       <H1>Cosmologies of Asylum</H1>
       <H2>Navigation chart</H2>
-      {Array.from({ length: 7 }, (_, i) => i + 1).map((i) => {
-        const { text, path } = IMAGES.circles[`c${i}`] || {};
-        return text && path ? <NavElement i={i} path={path} text={text} /> : null;
-      })}
+      {Array.from({ length: 7 }, (_, i) => i + 1)
+        .map((i) => i - 1)
+        .map((i) => {
+          const { text, path } = IMAGES.circles[`c${i}`] || {};
+          return text && path ? <NavElement i={i} path={path} text={text} /> : null;
+        })}
+      {Array.from({ length: 5 }, (_, i) => i + 1)
+        .map((i) => i - 1)
+        .map((i) => {
+          const { text, path } = IMAGES.islands[`i${i}`] || {};
+          console.log(i, text);
+          return text && path ? <NavElIsland path={path} text={text} /> : null;
+        })}
+
+      {lPath && lText ? <NavElIsland path={lPath} text={lText} /> : null}
     </NavWrapper>
   );
 };

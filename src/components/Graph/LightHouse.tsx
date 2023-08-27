@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { IMAGES } from "./images";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { IMAGES } from './images';
 
 const Wrapper = styled.div<{ hover: boolean }>`
   height: 100%;
@@ -26,7 +26,7 @@ const Position = styled.div`
   position: absolute;
   height: auto;
   width: 25vmin;
-  right: 20px;
+  right: 30%;
   bottom: 20px;
 `;
 
