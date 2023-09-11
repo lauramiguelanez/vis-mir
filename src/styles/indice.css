@@ -118,8 +118,8 @@
 }
 
 #container-weave a,
-a:visited {
-  text-decoration: none;
+a:hover a:visited {
+  text-decoration-color: black;
 }
 
 #container-weave a {
@@ -163,14 +163,14 @@ a:visited {
   margin-bottom: 20px;
 }
 
-#container-weave .island-quote-text {
-  font-family: 'libre baskerville', serif;
+#container-weave .nav-element {
+  font-family: 'nimbus sans l', serif;
   font-size: 18pt;
   font-style: italic;
+  margin-top: 30px;
 }
-#container-weave .island-quote-source {
-  padding-top: 30px;
+#container-weave .nav-description {
+  padding-top: 10px;
   font-family: 'nimbus sans l', sans-serif;
   font-size: 12pt;
-  text-align: right;
 }

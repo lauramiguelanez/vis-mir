@@ -96,3 +96,13 @@
   margin-top: 10px;
   text-align: right;
 }
+
+#container-weave .a-island {
+  font-family: 'nimbus sans l', sans-serif;
+  font-size: 18pt;
+  margin-top: 60px;
+  text-align: center;
+  > a {
+    color: black;
+  }
+}

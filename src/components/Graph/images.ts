@@ -241,7 +241,7 @@ export const IMAGES: IImages = {
       path: 'https://www.researchcatalogue.net/view/2236277/2237350',
       text: {
         level: 'Core Circle. ',
-        title: 'Vestibule. An Introductory Essay',
+        title: 'Cosmologies of Asylum: An Introductory Essay',
         description:
           'Situating the collaboration between Trampoline House & Project Art Works in the context of Lumbung',
       },
