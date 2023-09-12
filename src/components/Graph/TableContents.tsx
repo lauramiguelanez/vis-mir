@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import styled from 'styled-components';
-import { IMAGES } from './images';
+import React, { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
+import { IMAGES } from "./images";
 
 const Absolute = styled.div`
   position: absolute;
@@ -50,11 +50,30 @@ const RightSide = styled.div`
 const Paragraph = styled.p`
   font-family: ${(props) => props.theme.font.family.mulish};
   font-size: 14px;
+  @media only screen and (max-width: 1400px) {
+    font-size: 10px;
+  }
+  @media only screen and (max-height: 900px) {
+    font-size: 10px;
+  }
 `;
 const H1 = styled.h1`
   font-family: ${(props) => props.theme.font.family.mulish};
   font-size: 36px;
   margin-bottom: 10px;
+
+  @media only screen and (max-width: 900px) {
+    font-size: 20px;
+  }
+  @media only screen and (max-width: 1400px) {
+    font-size: 24px;
+  }
+  @media only screen and (max-height: 500px) {
+    font-size: 20px;
+  }
+  @media only screen and (max-height: 900px) {
+    font-size: 24px;
+  }
 `;
 const H2 = styled.h2`
   font-family: ${(props) => props.theme.font.family.mulish};
@@ -74,6 +93,18 @@ const NavEl = styled.div`
 const NavElI = styled.div`
   margin-bottom: 12px;
   overflow: hidden;
+  @media only screen and (max-width: 900px) {
+    margin-bottom: 5px;
+  }
+  @media only screen and (max-width: 1400px) {
+    margin-bottom: 8px;
+  }
+  @media only screen and (max-height: 500px) {
+    margin-bottom: 5px;
+  }
+  @media only screen and (max-height: 900px) {
+    margin-bottom: 8px;
+  }
 `;
 
 const NavText = styled.h3<{ hover: boolean }>`
@@ -83,7 +114,19 @@ const NavText = styled.h3<{ hover: boolean }>`
   transition: all 1s ease-in-out;
   margin: 0;
   padding: 0;
-  text-decoration: ${({ hover }) => (hover ? 'underline' : 'none')};
+  text-decoration: ${({ hover }) => (hover ? "underline" : "none")};
+  @media only screen and (max-width: 900px) {
+    font-size: 10px;
+  }
+  @media only screen and (max-width: 1400px) {
+    font-size: 14px;
+  }
+  @media only screen and (max-height: 500px) {
+    font-size: 10px;
+  }
+  @media only screen and (max-height: 900px) {
+    font-size: 14px;
+  }
 `;
 
 const NavDescription = styled.div<{ hover: boolean }>`
@@ -95,7 +138,7 @@ const NavDescription = styled.div<{ hover: boolean }>`
   -ms-transition: height, 0.5s linear;
   -o-transition: height, 0.5s linear;
   transition: height, 0.5s linear;
-  height: ${({ hover }) => (hover ? '70px' : '0px')};
+  height: ${({ hover }) => (hover ? "70px" : "0px")};
   text-decoration: none !important;
   margin: 0;
   padding: 0;
@@ -105,21 +148,25 @@ const Abstract: React.FC = () => {
   return (
     <>
       <Paragraph>
-        This is a harvest of ‘Massaging The Asylum System’, a year-long collaboration between
-        refugee justice centre Trampoline House (DK) and neurodiverse collective Project Art Works
-        (UK), initiated by Carlota Mir and Sara Alberani in the context of documenta fifteen.
-        Together, we set out to explore how these two communities are affected by social systems of
-        care and control. Focusing on the asylum system in Denmark, we joined forces to create
-        alliances, imagine a better asylum system and take back agency and joy. The project was
-        collectively funded by the Lumbung community with money from the Collective Pot.
+        This is a harvest of ‘Massaging The Asylum System’, a year-long
+        collaboration between refugee justice centre Trampoline House (DK) and
+        neurodiverse collective Project Art Works (UK), initiated by Carlota Mir
+        and Sara Alberani in the context of documenta fifteen. Together, we set
+        out to explore how these two communities are affected by social systems
+        of care and control. Focusing on the asylum system in Denmark, we joined
+        forces to create alliances, imagine a better asylum system and take back
+        agency and joy. The project was collectively funded by the Lumbung
+        community with money from the Collective Pot.
       </Paragraph>
       <Paragraph>
-        Harvested by Carlota Mir, the map contains the traces of the work we did together:
-        conversations, public programmes, workshops, collective drawings, informal moments, and
-        installations in Kassel, along with notes and reflections from the author’s Lumbung diaries.
-        Organised in a chronological manner around an introductory essay (core circle), the contents
-        are distributed in concentric layers and reflect a multitude of voices: artists, collective
-        members, curators, activists, facilitators, publics, and the Lumbung community.
+        Harvested by Carlota Mir, the map contains the traces of the work we did
+        together: conversations, public programmes, workshops, collective
+        drawings, informal moments, and installations in Kassel, along with
+        notes and reflections from the author’s Lumbung diaries. Organised in a
+        chronological manner around an introductory essay (core circle), the
+        contents are distributed in concentric layers and reflect a multitude of
+        voices: artists, collective members, curators, activists, facilitators,
+        publics, and the Lumbung community.
       </Paragraph>
       {/* <Paragraph>
         The smaller islands are organised around antonym word pairings that point at key themes of
@@ -151,14 +198,15 @@ const NavElement: React.FC<{
   return (
     <NavEl
       onClick={() => {
-        if (path) window.open(path, '_blank', 'noreferrer'); //window.location.href = path;
+        if (path) window.open(path, "_blank", "noreferrer"); //window.location.href = path;
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
       <NavText hover={hover}>
         <strong>{text.level}</strong>
-        {text.title} <NavDescription hover={hover}>{text.description}</NavDescription>
+        {text.title}{" "}
+        <NavDescription hover={hover}>{text.description}</NavDescription>
       </NavText>
     </NavEl>
   );
@@ -178,7 +226,7 @@ const NavElIsland: React.FC<{
   return (
     <NavElI
       onClick={() => {
-        if (path) window.open(path, '_blank', 'noreferrer'); //window.location.href = path;
+        if (path) window.open(path, "_blank", "noreferrer"); //window.location.href = path;
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -207,7 +255,9 @@ const Navigation: React.FC = () => {
         .map((i) => i - 1)
         .map((i) => {
           const { text, path } = IMAGES.circles[`c${i}`] || {};
-          return text && path ? <NavElement i={i} path={path} text={text} /> : null;
+          return text && path ? (
+            <NavElement i={i} path={path} text={text} />
+          ) : null;
         })}
       {Array.from({ length: 5 }, (_, i) => i + 1)
         .map((i) => i - 1)
