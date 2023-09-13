@@ -142,36 +142,35 @@ const Abstract: React.FC = () => {
   return (
     <>
       <Paragraph>
-        This is a harvest of ‘Massaging The Asylum System’, a year-long
-        collaboration between refugee justice centre Trampoline House (DK) and
-        neurodiverse collective Project Art Works (UK), initiated by Carlota Mir
-        and Sara Alberani in the context of documenta fifteen. Together, we set
-        out to explore how these two communities are affected by social systems
-        of care and control. Focusing on the asylum system in Denmark, we joined
-        forces to create alliances, imagine a better asylum system and take back
-        agency and joy. The project was collectively funded by the Lumbung
-        community with money from the Collective Pot.
+        <i>Massaging The Asylum System</i> is a year-long collaboration between
+        refugee justice centre Trampoline House (DK) and neurodiverse collective
+        Project Art Works (UK). The project was initiated by Carlota Mir and
+        Sara Alberani in the context of documenta fifteen and funded with common
+        resources from the lumbung Collective Pot.
       </Paragraph>
       <Paragraph>
-        Harvested by Carlota Mir, the map contains the traces of the work we did
-        together: conversations, public programmes, workshops, collective
-        drawings, informal moments, and installations in Kassel, along with
-        notes and reflections from the author’s Lumbung diaries. Organised in a
-        chronological manner around an introductory essay (core circle), the
-        contents are distributed in concentric layers and reflect a multitude of
-        voices: artists, collective members, curators, activists, facilitators,
-        publics, and the Lumbung community.
+        Together, we set out to explore how migrant and neurodivergent
+        communities are affected by social systems of <strong>care</strong> and
+        <strong>control</strong>, and we sought ways to massage the asylum
+        system - yes, massage, like a real <strong>massage</strong> - so that it
+        could become softer and more humane. Bringing together the vision and
+        artistic tools from both organisations, our work became a{" "}
+        <strong>temporary coalition</strong> of dissident bodies.
       </Paragraph>
-      {/* <Paragraph>
-        The smaller islands are organised around antonym word pairings that point at key themes of
-        the work: care/control, health/illness, solidarity/hostility, access/invisibility,
-        alliance/division.
-      </Paragraph> */}
-      {/*  <Paragraph>
-        In the landscape, layers also intertwine with other sites - Trampoline House, Project Art
-        Works, Lumbung dot space, and Trampoline House independent publisher visÀvis, featuring a
-        twin issue on the project that is based on a letter exchange.
-      </Paragraph> */}
+      <Paragraph>
+        As a lumbung practice, <strong>harvest</strong> refers to artistic
+        recordings of discussions and meetings. Harvested by co-curator Carlota
+        Mir, the map revisits the ecosystem of the project and its traces:
+        informal encounters, public conversations, art installations, and two
+        workshop series in Copenhagen and Kassel, reflecting a multitude of
+        voices from artists, collective members, facilitators, activists,
+        publics, and the lumbung community. Arranged chronologically alongside
+        notes and personal reflections, the circles take readers through the
+        collaboration process, while the islands point at the underlying
+        tensions that inform the work. The map also connects this harvest with a
+        twin issue on the project featuring poems and letters, published with
+        Trampoline House magazine visAvis and Lumbung books.
+      </Paragraph>
     </>
   );
 };
