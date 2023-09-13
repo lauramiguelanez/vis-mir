@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { IMAGES, ISvgImage } from './images';
-import { Floating } from './Floating';
-import { Tooltip } from '../Tooltip';
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { IMAGES, ISvgImage } from "./images";
+import { Floating } from "./Floating";
+import { Tooltip } from "../Tooltip";
 
 const Paragraph = styled.p`
   font-family: ${(props) => props.theme.font.family.mulish};
@@ -53,7 +53,7 @@ const getRadius = () => {
 };
 
 const getPosition = (radius: number, numNodes: number, index: number) => {
-  const n = 5;
+  const n = 3;
   const random = Math.round(Math.random() * (n - 1));
   const total = numNodes * n;
   const i = index * n + random;
@@ -80,8 +80,8 @@ const Island: React.FC<{ data: ISvgImage; i: number }> = ({ data: c, i }) => {
 
   useEffect(() => {
     setStyles();
-    window.addEventListener('resize', setStyles);
-    return () => window.removeEventListener('resize', setStyles);
+    window.addEventListener("resize", setStyles);
+    return () => window.removeEventListener("resize", setStyles);
   }, []);
 
   const onMouseEnter = () => {
@@ -126,9 +126,9 @@ export const Islands: React.FC = () => {
         position="auto"
         content={
           <Paragraph>
-            The smaller islands are organised around antonym word pairings that point at key themes
-            of the work: care/control, health/illness, solidarity/hostility, access/invisibility,
-            alliance/division.
+            The smaller islands are organised around antonym word pairings that
+            point at key themes of the work: care/control, health/illness,
+            solidarity/hostility, access/invisibility, alliance/division.
           </Paragraph>
         }
       >
