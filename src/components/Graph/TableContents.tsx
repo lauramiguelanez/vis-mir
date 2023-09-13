@@ -50,12 +50,6 @@ const RightSide = styled.div`
 const Paragraph = styled.p`
   font-family: ${(props) => props.theme.font.family.mulish};
   font-size: 14px;
-  @media only screen and (max-width: 1400px) {
-    font-size: 10px;
-  }
-  @media only screen and (max-height: 900px) {
-    font-size: 10px;
-  }
 `;
 const H1 = styled.h1`
   font-family: ${(props) => props.theme.font.family.mulish};
