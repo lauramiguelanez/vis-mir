@@ -53,7 +53,7 @@ const getRadius = () => {
 };
 
 const getPosition = (radius: number, numNodes: number, index: number) => {
-  const n = 3;
+  const n = 1;
   const random = Math.round(Math.random() * (n - 1));
   const total = numNodes * n;
   const i = index * n + random;
