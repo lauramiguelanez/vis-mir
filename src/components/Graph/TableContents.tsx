@@ -164,12 +164,15 @@ const Abstract: React.FC = () => {
         informal encounters, public conversations, art installations, and two
         workshop series in Copenhagen and Kassel, reflecting a multitude of
         voices from artists, collective members, facilitators, activists,
-        publics, and the lumbung community. Arranged chronologically alongside
-        notes and personal reflections, the circles take readers through the
-        collaboration process, while the islands point at the underlying
-        tensions that inform the work. The map also connects this harvest with a
-        twin issue on the project featuring poems and letters, published with
-        Trampoline House magazine visAvis and Lumbung books.
+        publics, and the lumbung community.
+      </Paragraph>
+      <Paragraph>
+        Arranged chronologically alongside notes and personal reflections, the
+        circles take readers through the collaboration process, while the
+        islands point at the underlying tensions that inform the work. The map
+        also connects this harvest with a twin issue on the project featuring
+        poems and letters, published with Trampoline House magazine visAvis and
+        Lumbung books.
       </Paragraph>
     </>
   );
