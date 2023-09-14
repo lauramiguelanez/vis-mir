@@ -57,10 +57,10 @@ export const IMAGES: IImages = {
   islands: {
     i0: {
       id: 'i0',
-      name: 'control-care',
+      name: 'care-control',
       text: {
         level: '',
-        title: 'Island: Control/Care',
+        title: 'Island: Care/Control',
         description: '',
       },
       viewBox: '0 0 138.76 108.16',
@@ -285,7 +285,7 @@ export const IMAGES: IImages = {
       path: 'https://www.researchcatalogue.net/view/2236277/2243364',
       text: {
         level: 'Circle II. ',
-        title: 'Where is the art?',
+        title: 'Where is the Art?',
         description:
           'A diary entry harvesting the joint research process inside the Where is the Art research group at documenta, and how the idea for the collaboration was born.',
       },
