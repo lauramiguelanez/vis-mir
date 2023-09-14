@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { IMAGES } from "./images";
+import { Title } from "../Title";
 
 const Absolute = styled.div`
   position: absolute;
@@ -27,6 +28,12 @@ const Side = styled.div`
   width: calc(calc(50vw - 50vmin) - 10px);
   height: 100%;
   margin: 60px;
+
+  @media (max-aspect-ratio: 7/5) {
+    height: 100vh;
+    width: 100%;
+    margin: 20px;
+  }
 `;
 
 const LeftSide = styled.div`
@@ -35,14 +42,22 @@ const LeftSide = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 40px;
 `;
 
 const RightSide = styled.div`
   pointer-events: none;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 90%;
+`;
+
+const AbstractWrapper = styled.div`
+  height: auto;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 `;
 
 /////////////
@@ -51,37 +66,65 @@ const Paragraph = styled.p`
   font-family: ${(props) => props.theme.font.family.mulish};
   font-size: 14px;
 `;
+
 const H1 = styled.h1`
   font-family: ${(props) => props.theme.font.family.mulish};
-  font-size: 36px;
+  font-weight: bold;
+  font-size: 56px;
   margin-bottom: 10px;
 
   @media only screen and (max-width: 900px) {
-    font-size: 20px;
+    font-size: 25px;
   }
   @media only screen and (max-width: 1400px) {
-    font-size: 24px;
+    font-size: 42px;
   }
   @media only screen and (max-height: 500px) {
-    font-size: 20px;
+    font-size: 25px;
   }
   @media only screen and (max-height: 900px) {
-    font-size: 24px;
+    font-size: 42px;
+  }
+
+  @media (max-aspect-ratio: 7/5) {
+    font-size: 30px;
   }
 `;
 const H2 = styled.h2`
   font-family: ${(props) => props.theme.font.family.mulish};
+  font-size: 22px;
+  margin: 0;
+  margin-bottom: 20px;
+  @media (max-aspect-ratio: 7/5) {
+    font-size: 16px;
+  }
+`;
+const H3 = styled.h3`
+  font-family: ${(props) => props.theme.font.family.mulish};
   font-size: 16px;
-  text-align: right;
+  text-align: center;
   margin: 0;
   margin-bottom: 20px;
 `;
 const NavWrapper = styled.div<{ height: number }>`
   /* height: ${({ height }) => height + 70}px; */
 `;
+
 const NavEl = styled.div`
   margin-bottom: 20px;
   overflow: hidden;
+  @media only screen and (max-width: 900px) {
+    margin-bottom: 8px;
+  }
+  @media only screen and (max-width: 1400px) {
+    margin-bottom: 12px;
+  }
+  @media only screen and (max-height: 500px) {
+    margin-bottom: 8px;
+  }
+  @media only screen and (max-height: 900px) {
+    margin-bottom: 12px;
+  }
 `;
 
 const NavElI = styled.div`
@@ -140,7 +183,7 @@ const NavDescription = styled.div<{ hover: boolean }>`
 
 const Abstract: React.FC = () => {
   return (
-    <>
+    <AbstractWrapper>
       <Paragraph>
         <i>Massaging The Asylum System</i> is a year-long collaboration between
         refugee justice centre Trampoline House (DK) and neurodiverse collective
@@ -174,7 +217,7 @@ const Abstract: React.FC = () => {
         poems and letters, published with Trampoline House magazine visAvis and
         Lumbung books.
       </Paragraph>
-    </>
+    </AbstractWrapper>
   );
 };
 
@@ -194,7 +237,8 @@ const NavElement: React.FC<{
   return (
     <NavEl
       onClick={() => {
-        if (path) window.open(path, "_blank", "noreferrer"); //window.location.href = path;
+        /* if (path) window.open(path, "_blank", "noreferrer"); */ window.location.href =
+          path;
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -222,7 +266,8 @@ const NavElIsland: React.FC<{
   return (
     <NavElI
       onClick={() => {
-        if (path) window.open(path, "_blank", "noreferrer"); //window.location.href = path;
+        /* if (path) window.open(path, "_blank", "noreferrer") */ window.location.href =
+          path;
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -245,8 +290,7 @@ const Navigation: React.FC = () => {
   const { path: lPath, text: lText } = IMAGES.other.lightHouse;
   return (
     <NavWrapper height={height}>
-      <H1>Cosmologies of Asylum</H1>
-      <H2>Navigation chart</H2>
+      <H3>Navigation chart</H3>
       {Array.from({ length: 7 }, (_, i) => i + 1)
         .map((i) => i - 1)
         .map((i) => {
@@ -268,9 +312,28 @@ const Navigation: React.FC = () => {
   );
 };
 
+const TitleWrapper = styled.div`
+  margin: 20px 60px;
+  position: absolute;
+  top: 0;
+  max-width: calc(45vw - 60px);
+`;
+
+const BigTitle: React.FC = () => {
+  return (
+    <TitleWrapper>
+      <H1>Cosmologies of Asylum</H1>
+      <H2>
+        A Lumbung Collaboration between Trampoline House and Project Art Works
+      </H2>
+    </TitleWrapper>
+  );
+};
+
 const TableContents: React.FC = () => {
   return (
     <Absolute id="table-of-contents">
+      <BigTitle />
       <NavContainer>
         <Side>
           <LeftSide>

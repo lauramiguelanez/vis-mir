@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Circles } from './Circles';
-import { Islands } from './Islands';
-import { LightHouse } from './LightHouse';
+import React from "react";
+import styled from "styled-components";
+import { Circles } from "./Circles";
+import { Islands } from "./Islands";
+import { LightHouse } from "./LightHouse";
 
 const Wrapper = styled.div`
   position: relative;
