@@ -151,7 +151,7 @@ const Abstract: React.FC = () => {
       <Paragraph>
         Together, we set out to explore how migrant and neurodivergent
         communities are affected by social systems of <strong>care</strong> and
-        <strong>control</strong>, and we sought ways to massage the asylum
+        <strong> control</strong>, and we sought ways to massage the asylum
         system - yes, massage, like a real <strong>massage</strong> - so that it
         could become softer and more humane. Bringing together the vision and
         artistic tools from both organisations, our work became a{" "}
