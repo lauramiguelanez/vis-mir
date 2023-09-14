@@ -102,10 +102,10 @@ const H2 = styled.h2`
 const H3 = styled.h3`
   font-family: ${(props) => props.theme.font.family.mulish};
   font-size: 16px;
-  text-align: center;
   margin: 0;
   margin-bottom: 20px;
 `;
+
 const NavWrapper = styled.div<{ height: number }>`
   /* height: ${({ height }) => height + 70}px; */
 `;
