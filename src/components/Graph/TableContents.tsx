@@ -28,6 +28,9 @@ const Side = styled.div`
   width: calc(calc(50vw - 50vmin) - 10px);
   height: 100%;
   margin: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @media (max-aspect-ratio: 7/5) {
     height: 100vh;
@@ -58,13 +61,15 @@ const AbstractWrapper = styled.div`
   max-height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
+  pointer-events: all;
+  padding-right: 10px;
 `;
 
 /////////////
 
 const Paragraph = styled.p`
   font-family: ${(props) => props.theme.font.family.mulish};
-  font-size: 14px;
+  font-size: 12px;
 `;
 
 const H1 = styled.h1`
