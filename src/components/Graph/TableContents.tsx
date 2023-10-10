@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
-import styled from 'styled-components';
-import { IMAGES } from './images';
-import { Title } from '../Title';
+import React, { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
+import { IMAGES } from "./images";
+import { Title } from "../Title";
 
 const Absolute = styled.div`
   position: absolute;
@@ -48,7 +48,9 @@ const LeftSide = styled.div`
 `;
 
 const RightSide = styled.div`
-  width: calc(calc(50vw - 50vmin) - 10px);
+  @media (min-aspect-ratio: 7/5) {
+    width: calc(calc(50vw - 50vmin) - 10px);
+  }
   pointer-events: none;
   display: flex;
   flex-direction: column;
@@ -112,7 +114,9 @@ const H3 = styled.h3`
 `;
 
 const NavWrapper = styled.div<{ height: number }>`
-  width: calc(calc(50vw - 50vmin) - 10px);
+  @media (min-aspect-ratio: 7/5) {
+    width: calc(calc(50vw - 50vmin) - 10px);
+  }
   /* height: ${({ height }) => height + 70}px; */
 `;
 
@@ -161,7 +165,7 @@ const NavText = styled.h3<{ hover: boolean }>`
   transition: all 1s ease-in-out;
   margin: 0;
   padding: 0;
-  text-decoration: ${({ hover }) => (hover ? 'underline' : 'none')};
+  text-decoration: ${({ hover }) => (hover ? "underline" : "none")};
   @media only screen and (max-width: 900px) {
     font-size: 10px;
   }
@@ -188,7 +192,7 @@ const NavDescription = styled.div<{ hover: boolean }>`
   -ms-transition: height, 0.5s linear;
   -o-transition: height, 0.5s linear;
   transition: height, 0.5s linear;
-  height: ${({ hover }) => (hover ? '70px' : '0px')};
+  height: ${({ hover }) => (hover ? "70px" : "0px")};
   text-decoration: none !important;
   margin: 0;
   padding: 0;
@@ -198,32 +202,37 @@ const Abstract: React.FC = () => {
   return (
     <AbstractWrapper>
       <Paragraph>
-        <i>Massaging The Asylum System</i> is a year-long collaboration between refugee justice
-        centre Trampoline House (DK) and neurodiverse collective Project Art Works (UK). The project
-        was initiated by Carlota Mir and Sara Alberani in the context of documenta fifteen and
-        funded with common resources from the lumbung Collective Pot.
+        <i>Massaging The Asylum System</i> is a year-long collaboration between
+        refugee justice centre Trampoline House (DK) and neurodiverse collective
+        Project Art Works (UK). The project was initiated by Carlota Mir and
+        Sara Alberani in the context of documenta fifteen and funded with common
+        resources from the lumbung Collective Pot.
       </Paragraph>
       <Paragraph>
-        Together, we set out to explore how migrant and neurodivergent communities are affected by
-        social systems of <strong>care</strong> and
-        <strong> control</strong>, and we sought ways to massage the asylum system - yes, massage,
-        like a real <strong>massage</strong> - so that it could become softer and more humane.
-        Bringing together the vision and artistic tools from both organisations, our work became a{' '}
+        Together, we set out to explore how migrant and neurodivergent
+        communities are affected by social systems of <strong>care</strong> and
+        <strong> control</strong>, and we sought ways to massage the asylum
+        system - yes, massage, like a real <strong>massage</strong> - so that it
+        could become softer and more humane. Bringing together the vision and
+        artistic tools from both organisations, our work became a{" "}
         <strong>temporary coalition</strong> of dissident bodies.
       </Paragraph>
       <Paragraph>
-        As a lumbung practice, <strong>harvest</strong> refers to artistic recordings of discussions
-        and meetings. Harvested by co-curator Carlota Mir, the map revisits the ecosystem of the
-        project and its traces: informal encounters, public conversations, art installations, and
-        two workshop series in Copenhagen and Kassel, reflecting a multitude of voices from artists,
-        collective members, facilitators, activists, publics, and the lumbung community.
+        As a lumbung practice, <strong>harvest</strong> refers to artistic
+        recordings of discussions and meetings. Harvested by co-curator Carlota
+        Mir, the map revisits the ecosystem of the project and its traces:
+        informal encounters, public conversations, art installations, and two
+        workshop series in Copenhagen and Kassel, reflecting a multitude of
+        voices from artists, collective members, facilitators, activists,
+        publics, and the lumbung community.
       </Paragraph>
       <Paragraph>
-        Arranged chronologically alongside notes and personal reflections, the circles take readers
-        through the collaboration process, while the islands point at the underlying tensions that
-        inform the work. The map also connects this harvest with a twin issue on the project
-        featuring poems and letters, published with Trampoline House magazine visAvis and Lumbung
-        books.
+        Arranged chronologically alongside notes and personal reflections, the
+        circles take readers through the collaboration process, while the
+        islands point at the underlying tensions that inform the work. The map
+        also connects this harvest with a twin issue on the project featuring
+        poems and letters, published with Trampoline House magazine visAvis and
+        Lumbung books.
       </Paragraph>
     </AbstractWrapper>
   );
@@ -245,14 +254,16 @@ const NavElement: React.FC<{
   return (
     <NavEl
       onClick={() => {
-        /* if (path) window.open(path, "_blank", "noreferrer"); */ window.location.href = path;
+        /* if (path) window.open(path, "_blank", "noreferrer"); */ window.location.href =
+          path;
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
       <NavText hover={hover}>
         <strong>{text.level}</strong>
-        {text.title} <NavDescription hover={hover}>{text.description}</NavDescription>
+        {text.title}{" "}
+        <NavDescription hover={hover}>{text.description}</NavDescription>
       </NavText>
     </NavEl>
   );
@@ -272,7 +283,8 @@ const NavElIsland: React.FC<{
   return (
     <NavElI
       onClick={() => {
-        /* if (path) window.open(path, "_blank", "noreferrer") */ window.location.href = path;
+        /* if (path) window.open(path, "_blank", "noreferrer") */ window.location.href =
+          path;
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -300,7 +312,9 @@ const Navigation: React.FC = () => {
         .map((i) => i - 1)
         .map((i) => {
           const { text, path } = IMAGES.circles[`c${i}`] || {};
-          return text && path ? <NavElement i={i} path={path} text={text} /> : null;
+          return text && path ? (
+            <NavElement i={i} path={path} text={text} />
+          ) : null;
         })}
       {Array.from({ length: 5 }, (_, i) => i + 1)
         .map((i) => i - 1)
@@ -326,7 +340,9 @@ const BigTitle: React.FC = () => {
   return (
     <TitleWrapper>
       <H1>Cosmologies of Asylum</H1>
-      <H2>A Lumbung Collaboration between Trampoline House and Project Art Works</H2>
+      <H2>
+        A Lumbung Collaboration between Trampoline House and Project Art Works
+      </H2>
     </TitleWrapper>
   );
 };
