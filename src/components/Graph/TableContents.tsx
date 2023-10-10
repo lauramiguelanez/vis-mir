@@ -89,6 +89,9 @@ const H1 = styled.h1`
   @media only screen and (max-height: 500px) {
     font-size: 25px;
   }
+  @media only screen and (max-height: 700px) {
+    font-size: 34px;
+  }
   @media only screen and (max-height: 900px) {
     font-size: 42px;
   }
@@ -136,6 +139,9 @@ const NavEl = styled.div`
   @media only screen and (max-height: 500px) {
     margin-bottom: 8px;
   }
+  @media only screen and (max-height: 700px) {
+    font-size: 10px;
+  }
   @media only screen and (max-height: 900px) {
     margin-bottom: 12px;
   }
@@ -152,6 +158,9 @@ const NavElI = styled.div`
   }
   @media only screen and (max-height: 500px) {
     margin-bottom: 5px;
+  }
+  @media only screen and (max-height: 700px) {
+    font-size: 6px;
   }
   @media only screen and (max-height: 900px) {
     margin-bottom: 8px;
@@ -177,6 +186,9 @@ const NavText = styled.h3<{ hover: boolean }>`
   }
   @media only screen and (max-height: 500px) {
     font-size: 10px;
+  }
+  @media only screen and (max-height: 700px) {
+    font-size: 12px;
   }
   @media only screen and (max-height: 900px) {
     font-size: 14px;
