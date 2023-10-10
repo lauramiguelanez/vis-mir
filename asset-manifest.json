@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/vis-mir/static/css/main.7dc380bf.css",
-    "main.js": "/vis-mir/static/js/main.da74e858.js",
+    "main.js": "/vis-mir/static/js/main.e60aa574.js",
     "static/js/787.2460bc2b.chunk.js": "/vis-mir/static/js/787.2460bc2b.chunk.js",
     "index.html": "/vis-mir/index.html",
     "main.7dc380bf.css.map": "/vis-mir/static/css/main.7dc380bf.css.map",
-    "main.da74e858.js.map": "/vis-mir/static/js/main.da74e858.js.map",
+    "main.e60aa574.js.map": "/vis-mir/static/js/main.e60aa574.js.map",
     "787.2460bc2b.chunk.js.map": "/vis-mir/static/js/787.2460bc2b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7dc380bf.css",
-    "static/js/main.da74e858.js"
+    "static/js/main.e60aa574.js"
   ]
 }
