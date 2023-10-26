@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { IMAGES } from './images';
-import { Title } from '../Title';
 
 const Absolute = styled.div`
   position: absolute;
@@ -30,6 +29,7 @@ const Side = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  pointer-events: none;
 
   @media (max-aspect-ratio: 7/5) {
     height: 100vh;
@@ -44,7 +44,7 @@ const LeftSide = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 `;
 
 const RightSide = styled.div`
@@ -125,6 +125,7 @@ const NavWrapper = styled.div<{ height: number }>`
 `;
 
 const NavEl = styled.div`
+  pointer-events: all;
   margin-bottom: 20px;
   overflow: hidden;
   @media only screen and (max-width: 900px) {
@@ -336,7 +337,9 @@ const TitleWrapper = styled.div`
   /* margin: 20px 0px; */
   /* position: absolute;
   top: 0; */
-  max-width: calc(45vw - 60px);
+  width: calc(calc(50vw - 50vmin) - 0px);
+  /* width: calc(30vw - 70px); */
+  pointer-events: none;
 `;
 
 const BigTitle: React.FC = () => {
